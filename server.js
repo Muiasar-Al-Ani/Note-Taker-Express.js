@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
-const fs = require("fs");
-const util = require("util");
+const {readFromFile, readAndAppend} = require('./helpers/fsUtils')
 
 const PORT = process.env.port || 3001;
 
@@ -20,7 +19,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
-const readFromFile = util.promisify(fs.readFile);
+
 
 app.get("/api/notes", (req, res) => {
   readFromFile("./db/db.json").then(data => res.json(JSON.parse(data)));

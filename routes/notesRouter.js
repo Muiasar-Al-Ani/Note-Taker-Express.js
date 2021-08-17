@@ -1,3 +1,4 @@
+// Imports all the required modules, functions and files
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
@@ -9,11 +10,15 @@ const {
 } = require("../helpers/fsUtils");
 
 
-
+// GET method returns back the retrieved data as json file 
 router.get("/", (req, res) => {
   readFromFile("./db/db.json").then(data => res.json(JSON.parse(data)));
 });
 
+
+// POST method gets the data from the request and create a new object of newNote
+// Writes the new note to the file system using the readAndAppend function
+// And returns an error if fails to write the note to the file
 router.post("/", (req, res) => {
   const { title, text } = req.body;
   console.info(req.body);
@@ -31,6 +36,9 @@ router.post("/", (req, res) => {
   }
 });
 
+
+// DELETE method that gets the id from the request parameter
+// Comperes it to the notes IDs and deletes the matching note
 router.delete("/:id", (req, res) => {
   console.log(req.params);
   const { id } = req.params;
@@ -43,4 +51,6 @@ router.delete("/:id", (req, res) => {
   return res.send();
 });
 
+
+// Exports the router module 
 module.exports = router;

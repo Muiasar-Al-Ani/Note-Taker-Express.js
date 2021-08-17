@@ -2,9 +2,8 @@
 const fs = require("fs");
 const util = require("util");
 
-// Makes the read file from file system asynchronous 
+// Makes the read file from file system asynchronous
 const readFromFile = util.promisify(fs.readFile);
-
 
 // Writes data to file system by giving it a destination and data
 const writeToFile = (destination, content) => {
@@ -13,8 +12,8 @@ const writeToFile = (destination, content) => {
   );
 };
 
-// Reads from the given json file and writes data to file system 
-// Checks for errors and after it parses the json file and adds the new note obj 
+// Reads from the given json file and writes data to file system
+// Checks for errors and after it parses the json file and adds the new note obj
 const readAndAppend = (content, file) => {
   fs.readFile(file, "utf8", (err, data) => {
     if (err) {
@@ -27,6 +26,5 @@ const readAndAppend = (content, file) => {
   });
 };
 
-
 // Exports the readFromFile, writeToFile and readAndAppend to be available to the App
-module.exports = {readFromFile, writeToFile, readAndAppend}
+module.exports = { readFromFile, writeToFile, readAndAppend };

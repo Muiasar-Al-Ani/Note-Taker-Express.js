@@ -20,7 +20,7 @@ This a Note Taker App that runs on node and uses express.js to route all the get
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-[Click here to see the running Note Taker !](ldjskfs)
+[Click here to see the running Note Taker !](ldjsfs)
 
 
 ## Installation : 
@@ -47,9 +47,9 @@ Users can go to the deployed App on heroku and add notes. Users can add note's t
 
 
 ## Screen shots : 
-### Here are screen shots of my deployed Note Taker  App!![ScreenShot](sdkljflksjdf)![ScreenShot](sdfdsfsdf)![ScreenShot](sdfsfsdf)![ScreenShot](sdfsdfsdf)
+### Here are screen shots of my deployed Note Taker  App!![ScreenShot](./screen-shots/NoteTaker1.png)![ScreenShot](./screen-shots/NoteTaker2.png)
 
-[The Demo Video](sgsdsdfsf)
+
 
 ## Credits :
 

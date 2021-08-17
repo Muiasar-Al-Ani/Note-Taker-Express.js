@@ -1,4 +1,4 @@
-// Exports the required fs and util node modules that's needed to access the filesystem
+// Imports the required fs and util node modules that's needed to access the filesystem
 const fs = require("fs");
 const util = require("util");
 
